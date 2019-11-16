@@ -19,11 +19,13 @@ if ! [ -f /sysroot/.coreos-aleph-version.json ]; then
     exit 0
 fi
 
+live_label=$(/usr/bin/is-live-image)
+
 # Don't create mount units for /boot or /boot/efi on live systems.
 # ConditionPathExists won't work here because conditions don't affect
 # the dependency on the underlying device unit.  Note this can't
 # test for /run/ostree-live as that races with the live-generator.
-if ! is_live_image; then
+if [ -z "${live_label}" ]; then
     add_wants boot.mount
     cat > "${UNIT_DIR}/boot.mount" <<EOF
 # Automatically created by coreos-boot-mount-generator

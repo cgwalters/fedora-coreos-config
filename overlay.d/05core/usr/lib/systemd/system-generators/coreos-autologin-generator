@@ -39,7 +39,8 @@ fi
 
 # Autologin on ISO boots but not PXE boots.  The only way to tell the
 # difference is a kernel argument.
-if ! have_karg coreos-iso; then
+label=$(/usr/bin/is-live-image)
+if [ -z "${label}" ]; then
     exit 0
 fi
 
