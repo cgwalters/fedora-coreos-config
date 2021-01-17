@@ -135,6 +135,7 @@ packages:
   - lvm2 iscsi-initiator-utils sg3_utils
   - device-mapper-multipath
   - xfsprogs e2fsprogs btrfs-progs mdadm
+  - stratisd
   - cryptsetup
   - cifs-utils
   - WALinuxAgent-udev
