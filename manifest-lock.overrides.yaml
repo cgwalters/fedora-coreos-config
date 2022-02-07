@@ -10,15 +10,15 @@
 
 packages:
   authselect:
-    evr: 1.3.0-3.fc36
+    evr: 1.3.0-9.fc36
     metadata:
       reason: https://github.com/coreos/fedora-coreos-tracker/issues/1057
-      type: pin
+      type: fast-track
   authselect-libs:
-    evr: 1.3.0-3.fc36
+    evr: 1.3.0-9.fc36
     metadata:
       reason: https://github.com/coreos/fedora-coreos-tracker/issues/1057
-      type: pin
+      type: fast-track
   container-selinux:
     evra: 2:2.176.0-1.fc36.noarch
     metadata:
