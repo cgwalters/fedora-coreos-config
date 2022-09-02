@@ -157,8 +157,6 @@ exclude-packages:
   - python
   - python2
   - python2-libs
-  - python3
-  - python3-libs
   - perl
   - perl-interpreter
   - nodejs
